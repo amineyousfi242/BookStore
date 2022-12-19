@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/linearLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="16dp"
+              tools:context=".MainActivity"
+              android:background="@color/my_primary"
+>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_bar_layout">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/book_title"
+                android:text="Books"
+                android:textSize="32dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+        />
+
+        <ImageButton
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/menu_btn"
+                android:src="@drawable/baseline_menu_24"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/white"
+                android:background="?attr/selectableItemBackgroundBorderless"
+        />
+    </RelativeLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_badge"
+            android:layout_below="@+id/title_bar_layout"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginVertical="26dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/rounded_corner">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/book_search"
+                android:text="Search for a book"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+        />
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit1"
+                android:hint="put your book name "
+                android:inputType="text"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="8dp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+        />
+
+        <Button
+                android:id= "@+id/button1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="send"
+                app:backgroundTint="@color/orange"
+                android:textSize="20dp"
+                android:background="@drawable/button_customized_form"
+                android:textStyle="bold"
+        />
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_badge"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginVertical="26dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/rounded_corner">
+
+        <TextView
+                android:id="@+id/txtPlayer2"
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Place "
+                android:textColor="?android:textColorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit2"
+                android:inputType="text"
+                android:autofillHints=""
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="8dp"
+                android:padding="12dp"
+                android:textColor="@color/black"
+        />
+    </LinearLayout>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_book_btn"
+            android:backgroundTint="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/descLogout"
+            android:src="@drawable/baseline_add_24"/>
+
+</RelativeLayout>
